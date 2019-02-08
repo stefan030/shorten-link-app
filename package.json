@@ -8,6 +8,7 @@
     "@babel/runtime": "^7.1.5",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.8.1",
+    "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.8.1",
     "valid-url": "^1.0.9"
   }
