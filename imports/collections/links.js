@@ -1,4 +1,10 @@
 import { Mongo } from 'meteor/mongo';
 
 
-export const Links = new Mongo.collection('links');
+Meteor.methods({
+   'links.insert': function (url)  {
+       console.log('Attempting to save ' + url);
+   }
+});
+
+export const Links = new Mongo.Collection('links');
