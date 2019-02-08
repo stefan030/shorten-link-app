@@ -17,6 +17,8 @@ function onRoute(req, res, next) {
     const link = Links.findOne({ token: req.params.token });
 
     if (link) {
+        // Increment link clicks
+        Links.update(link, { $inc: { clicks: 1}});
         // If we find link object, redirect the user to the long URL
         res.writeHead(307, { 'Location': link.url });
         res.end();
